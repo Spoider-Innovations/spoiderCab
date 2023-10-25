@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spoider_app/view/track_screen/screen/track_screen.dart';
 
 import '../../domain/constants/constants.dart';
@@ -8,8 +9,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double w = MediaQuery.of(context).size.width;
-    double h = MediaQuery.of(context).size.height;
+    // double w = MediaQuery.of(context).size.width;
+    // double h = MediaQuery.of(context).size.height;
     return  Scaffold(
       body: Center(
         child: Column(
@@ -17,9 +18,9 @@ class HomeScreen extends StatelessWidget {
           
           children: [
            CircleAvatar(
-            radius: w * 0.18 ,
+            radius: 70.w ,
             backgroundColor: Colors.blue,
-            child: const Icon(Icons.done_outline),
+            child:  Icon(Icons.done_outline,size: 40.w,),
            ),
            szdbx,
            const Text('YOUR BOOKING IS CONFIRMED',style: TextStyle(
@@ -31,7 +32,7 @@ class HomeScreen extends StatelessWidget {
            ElevatedButton(
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.blue),
-            minimumSize: MaterialStateProperty.all(Size(w * 0.35, h * 0.05))
+            minimumSize: MaterialStateProperty.all(Size(100.w,35.h))
           ),
             onPressed: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (context){

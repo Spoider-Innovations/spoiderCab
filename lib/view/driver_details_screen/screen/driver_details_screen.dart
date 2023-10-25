@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:spoider_app/domain/constants/constants.dart';
 
-class DriverSetailsScreen extends StatelessWidget {
-  const DriverSetailsScreen({super.key});
+class DriverDetailsScreen extends StatelessWidget {
+  const DriverDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-     double h = MediaQuery.of(context).size.height;
-     double w = MediaQuery.of(context).size.width;
+    //  double h = MediaQuery.of(context).size.height;
+    //  double w = MediaQuery.of(context).size.width;
 
  return Scaffold(
      
@@ -34,11 +36,11 @@ class DriverSetailsScreen extends StatelessWidget {
               
             ),
               Positioned(
-                bottom: h * 0.06,
-                right: w * 0.05,
+                bottom:10 .h,
+                right: 10.w,
                 child: InkWell(
                 onTap: (){
-                displayBottomSheet(context,w,h);
+                displayBottomSheet(context,);
                 },
                  child: const CircleAvatar(
                   radius: 40,
@@ -51,70 +53,88 @@ class DriverSetailsScreen extends StatelessWidget {
         ),
     );
   }
- displayBottomSheet(BuildContext context,double w,double h){
+ displayBottomSheet(BuildContext context,){
   return showModalBottomSheet(
     context: context,
-     builder: (context) => Container(
+     builder: (context) => SizedBox(
       width: double.infinity ,
-      height: h * 0.3,
+      height:200.h,
       child:  Column(
         children: [
           SizedBox(
-            height: h * 0.1,
+            height: 90.h,
             child: Stack(
               children: [
-                SizedBox(
-                   height: h * 0.08,
-                  width: w * 0.7,
-                  child: const Card(
-                   child: Padding(
-                     padding: EdgeInsets.all(8.0),
-                     child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('On Trip',style: TextStyle(color: Colors.blue),),
-                        Row(
-                          children: [
-                            Icon(Icons.emergency,size: 12,color: Colors.red,),
-                            Text('Emergency',style: TextStyle(color: Colors.red),),
-                          ],
-                        )
-                      ],
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: SizedBox(
+                     height: 60.h,
+                    width:300.w,
+                    child: const Card(
+                     child: Padding(
+                       padding: EdgeInsets.all(8.0),
+                       child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text('On Trip',style: TextStyle(color: Colors.blue),),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Icon(Icons.emergency,size: 12,color: Colors.red,),
+                                Text('Emergency',style: TextStyle(color: Colors.red),),
+                              ],
+                            ),
+                          )
+                        ],
+                       ),
                      ),
-                   ),
+                    ),
                   ),
                 ),
                 Positioned(
-                  top: h * 0.05,
-                  right: w * 0.1,
-                  left: w * 0.1,
+                  top: 50.h,
+                  right:1.w,
+                  left: 1.w,
                   child: const CircleAvatar(backgroundImage: AssetImage('lib/assets/driverimage.webp',) )
                   )
               ],
             ),
           ),
           const Text('Ravi'),
-          const Text('TN 48 B 87654',style: TextStyle(color: Colors.grey),),
+          const Text('TN - 48 B 87654',style: TextStyle(color: Colors.grey),),
           const Text('94456782358',style: TextStyle(color: Colors.grey),),
+          szdbx,
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ElevatedButton(
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-                  backgroundColor: MaterialStateProperty.all(Colors.grey)
-                ),
-                onPressed: (){},
-                 child: Text('share',style: TextStyle(color: Colors.white))
-                 ),
-                 ElevatedButton(
+              SizedBox(
+                width: 100.w,
+                height: 30.h,
+                child: ElevatedButton(
                   style: ButtonStyle(
+                    //  minimumSize: MaterialStateProperty.all(Size(60.w, 30.h)),
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                    backgroundColor: MaterialStateProperty.all(Colors.grey)
+                  ),
+                  onPressed: (){},
+                   child: const Text('share',style: TextStyle(color: Colors.black))
+                   ),
+              ),
+                 szdbxW,
+                 ElevatedButton(
+                  
+                  style: ButtonStyle(
+                     minimumSize: MaterialStateProperty.all(Size(60.w, 30.h)),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
                   backgroundColor: MaterialStateProperty.all(Colors.blue)
                 ),
                   onPressed: (){},
-                   child: Text('End Ride',style: TextStyle(color: Colors.white),)
+                   child: const Text('End Ride',style: TextStyle(color: Colors.white),)
                    )
             ],
           )

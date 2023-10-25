@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spoider_app/view/driver_details_screen/screen/driver_details_screen.dart';
 
 class TrackScreen extends StatelessWidget {
@@ -29,13 +30,12 @@ class TrackScreen extends StatelessWidget {
               ),
             ),
              Positioned(
-              bottom: h * 0.01,
+              bottom:8.h,
               left: 0,
               right: 0,
               child: SizedBox(
-                height: h * 0.23,
+                height: 160.h,
                 child: Card(
-                  
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -47,8 +47,8 @@ class TrackScreen extends StatelessWidget {
                         title: const Text('Auto Driver Name',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),
                           subtitle:const Text('Auto Name') ,
                           trailing: Container(
-                            width: w * 0.25,
-                            height: h * 0.04,
+                            width:100.w,
+                            height: 30.w,
                             decoration: BoxDecoration(
                                  color: Colors.grey,
                                  borderRadius: BorderRadius.circular(10)
@@ -85,11 +85,11 @@ class TrackScreen extends StatelessWidget {
                         style: ButtonStyle(
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
                           backgroundColor: MaterialStateProperty.all(Colors.blue),
-                          minimumSize: MaterialStateProperty.all(Size(w * 0.55, h * 0.05))
+                          minimumSize: MaterialStateProperty.all(Size(200.w, 35.h))
                         ),
                         onPressed: (){
                           Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                            return const DriverSetailsScreen();
+                            return const DriverDetailsScreen();
                           }));
                         }, 
                         child: const Text('Call Driver',style: TextStyle(color: Colors.white),)
