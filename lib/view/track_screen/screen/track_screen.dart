@@ -14,7 +14,7 @@ class _TrackScreenState extends State<TrackScreen> {
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
-    const LatLng _googlePlex = LatLng(37.433, -122.0848);
+    const LatLng _googlePlex = LatLng(12.9716, 77.5946);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -34,13 +34,13 @@ class _TrackScreenState extends State<TrackScreen> {
                 CameraPosition(target: _googlePlex, zoom: 13),
           ),
           Positioned(
-              bottom: h * 0.01,
-              left: 0,
-              right: 0,
-              child: SizedBox(
-                height: h * 0.23,
-                child: Card(
-                    child: Column(
+            bottom: h * 0.01,
+            left: 0,
+            right: 0,
+            child: SizedBox(
+              height: h * 0.23,
+              child: Card(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Center(
@@ -131,8 +131,10 @@ class _TrackScreenState extends State<TrackScreen> {
                           )),
                     )
                   ],
-                )),
-              ))
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
