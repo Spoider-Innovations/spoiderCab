@@ -41,13 +41,12 @@ Future<void> checkFirstTime() async{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: 100,
-              width: 100,
-              child: Card(
-                  child: Image.asset(
-                'lib/assets/spoiderLogo.jpeg',
+              height: 180,
+              width: 180,
+              child: Image.asset(
+                'lib/assets/Group 87.png',
                 fit: BoxFit.cover,
-              )),
+              ),
             ),
             
           ],

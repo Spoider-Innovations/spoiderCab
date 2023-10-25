@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:spoider_app/view/driver_details_screen/screen/driver_details_screen.dart';
 
 class TrackScreen extends StatefulWidget {
   const TrackScreen({super.key});
@@ -120,10 +119,10 @@ class _TrackScreenState extends State<TrackScreen> {
                               minimumSize: MaterialStateProperty.all(
                                   Size(w * 0.55, h * 0.05))),
                           onPressed: () {
-                            Navigator.of(context)
-                                .push(MaterialPageRoute(builder: (context) {
-                              return const DriverSetailsScreen();
-                            }));
+                            // Navigator.of(context)
+                            //     .push(MaterialPageRoute(builder: (context) {
+                            //   return const DriverSetailsScreen();
+                            // }));
                           },
                           child: const Text(
                             'Call Driver',
