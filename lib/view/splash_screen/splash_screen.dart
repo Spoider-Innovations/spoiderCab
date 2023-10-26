@@ -23,13 +23,13 @@ Future<void> checkFirstTime() async{
  bool isFirstTime = pref.getBool('firstTime') ?? true;
 
  Future.delayed(const Duration(seconds: 2),(){
-  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (ctx) {
-      return const BottomNavBar();
-    }));
+  
     if(isFirstTime){
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const GetStartedScreen()));
+      
     }else{
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const HomeScreen()));
+      
     }
  });
 }

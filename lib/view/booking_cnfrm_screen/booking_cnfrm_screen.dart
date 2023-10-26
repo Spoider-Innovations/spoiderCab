@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:spoider_app/view/track_screen/screen/track_screen.dart';
 
 import '../../domain/constants/constants.dart';
 
@@ -35,9 +34,9 @@ class BookingConfirmScreen extends StatelessWidget {
             minimumSize: MaterialStateProperty.all(Size(100.w,35.h))
           ),
             onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                 return const TrackScreen();
-              }));
+              // Navigator.of(context).push(MaterialPageRoute(builder: (context){
+              //    return const TrackScreen();
+              // }));
             },
              child: const Text('Track',style: TextStyle(
               color: Colors.white

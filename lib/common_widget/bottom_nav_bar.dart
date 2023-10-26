@@ -12,7 +12,7 @@ class BottomNavBar extends StatefulWidget {
 int currentIndex = 0;
 final screens = [
   const HomeScreen(),
-  const HistoryScreen()
+  const ChatScreen()
   
 ];
 
@@ -30,14 +30,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
           () => currentIndex = index,
         ),
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.orange,
+        selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         // backgroundColor: Colors.white,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home_outlined,
-              color: Colors.amber,
+              color: Colors.blue,
             ),
             label: '',
           ),
@@ -50,7 +50,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           //   label: '',
           // ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person,  color: Colors.amber,),
+            icon: Icon(Icons.chat,  color: Colors.amber,),
 
             label: '',
           ),

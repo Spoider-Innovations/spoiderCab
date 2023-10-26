@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../sign_up_screen/screen/sign_up_screen.dart';
+import '../../signup_screen/screen/signup_screen.dart';
 
 class EnableLocationScreen extends StatelessWidget {
   const EnableLocationScreen({super.key});
