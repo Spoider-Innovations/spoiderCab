@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:spoider_app/view/home_screen/home_screen.dart';
+import '../enable_loc_screen/screen/enable_loc_screen.dart';
+
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({super.key});
@@ -11,7 +12,7 @@ class GetStartedScreen extends StatelessWidget {
      double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Colors.grey,
+  backgroundColor: const Color(0xFFDAE4EB),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -19,9 +20,7 @@ class GetStartedScreen extends StatelessWidget {
             SizedBox(
               width: 50,
               height: 50,
-              child: Card(
-                child: Image.asset('lib/assets/autoimage.jpeg',fit: BoxFit.cover,),
-              ),
+              child: Image.asset('lib/assets/Group 87.png',fit: BoxFit.cover,),
             ),
             const Text('Spoider',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
             SizedBox(
@@ -51,6 +50,7 @@ class GetStartedScreen extends StatelessWidget {
   void onGetstartedPressed(BuildContext context) async{
   SharedPreferences pref = await SharedPreferences.getInstance();
   pref.setBool('firstTime', false);
-  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
+  // ignore: use_build_context_synchronously
+  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const EnableLocationScreen()));
   }
 }

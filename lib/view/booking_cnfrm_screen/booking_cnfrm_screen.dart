@@ -4,8 +4,8 @@ import 'package:spoider_app/view/track_screen/screen/track_screen.dart';
 
 import '../../domain/constants/constants.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class BookingConfirmScreen extends StatelessWidget {
+  const BookingConfirmScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

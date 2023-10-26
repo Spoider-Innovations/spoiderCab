@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../view/home_screen/home_screen.dart';
+import '../view/history_screen/screen/history_screen.dart';
+import '../view/home_screen/screen/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -12,6 +12,7 @@ class BottomNavBar extends StatefulWidget {
 int currentIndex = 0;
 final screens = [
   const HomeScreen(),
+  const HistoryScreen()
   
 ];
 
@@ -36,6 +37,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home_outlined,
+              color: Colors.amber,
             ),
             label: '',
           ),
@@ -48,7 +50,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
           //   label: '',
           // ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.person,  color: Colors.amber,),
+
             label: '',
           ),
         ],
